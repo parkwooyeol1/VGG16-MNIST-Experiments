@@ -14,21 +14,15 @@
 ### 1. CASE 1: 마지막 레이어 교체 + 전체 학습
 - pretrained VGG16의 마지막 레이어를 제거하고 MNIST 클래스(10)용 Linear 레이어 추가
 - Convolution + Classifier 모든 레이어 학습
-- 장점: 모델의 전체 용량 활용 → 정확도 높을 가능성 있음
-- 단점: 학습 속도 느림, 작은 데이터에서는 과적합 가능
 
 ### 2. CASE 2: 마지막 레이어 추가만, 전체 학습
 - pretrained Convolution layer는 유지
 - 마지막 Linear 레이어만 MNIST 클래스 수에 맞게 변경
 - Classifier 전체 학습
-- 장점: CASE1보다 학습 안정적, 속도는 비슷
-- 단점: 정확도는 CASE1보다 약간 낮을 수 있음
 
 ### 3. CASE 3: Convolution Freeze + 마지막 레이어만 학습
 - pretrained Convolution layer freeze (`requires_grad=False`)
 - 마지막 Linear 레이어만 학습
-- 장점: 학습 속도 빠름, 작은 데이터셋에서도 충분한 성능
-- 단점: 복잡한 패턴 학습에는 제한 가능
 
 
 ## 분석
