@@ -1,6 +1,6 @@
 # MNIST 분류 실험: VGG16 Fine-Tuning 전략 비교
 
-이 프로젝트는 VGG16 모델을 MNIST 데이터셋에 적용하여 **세 가지 Fine-Tuning 전략**을 비교.  
+VGG16 모델을 MNIST 데이터셋에 적용하여 **세 가지 Fine-Tuning 전략**을 비교.  
 각 전략별 정확도 분석.
 
 ---
