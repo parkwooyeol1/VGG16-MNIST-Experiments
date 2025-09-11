@@ -38,3 +38,37 @@ VGG16 모델을 MNIST 데이터셋에 적용하여 **세 가지 Fine-Tuning 전�
 - Validation : 12,000장
 - Test : 10,000장
 - Total : 70,000장
+
+  ## 분석
+
+1. **CASE1**  
+   - 학습 Loss는 점진적으로 감소하며, Validation Loss도 대부분 안정적  
+   - Validation Accuracy 최고 99.38% 달성  
+   - Early Stopping 5 Epoch에서 작동 → 모델이 이미 충분히 학습됨  
+   - 특징: 전체 학습했지만 Early Stopping 덕분에 빠르게 종료  
+
+2. **CASE2**  
+   - 학습 Loss 지속적으로 감소  
+   - Validation Accuracy 최고 99.45% → 성능 거의 최상  
+   - Epoch 10까지 학습, 아직 Early Stopping 작동 안 함 → **추가 학습 여력이 있음**  
+   - 특징: case1보다 Epoch 많지만 Val Accuracy 큰 차이 없음, 더 학습하면 성능 소폭 개선 가능  
+
+3. **CASE3**  
+   - Validation Accuracy 최고 98.86% → 전체 학습 대비 약간 낮음  
+   - Early Stopping 4 Epoch → 가장 빨리 학습 종료  
+   - 특징: Conv layer freeze로 연산량 감소 → 학습 속도 빠르지만 성능 약간 감소  
+
+---
+
+## 결론
+
+- Conv freeze 후 마지막 레이어만 학습한 **CASE3**는 학습 속도가 빠르지만 정확도는 약간 낮음  
+- 전체 학습한 **CASE1/2**는 최고 정확도를 달성  
+- CASE2는 **아직 추가 학습 여력이 있어** 학습 시간을 늘리면 더 높은 정확도 도달 가능  
+
+---
+
+## 참고
+
+- 모델: Pretrained VGG16 (PyTorch)  
+- 학습 환경: CUDA GPU (RTX 3080 Ti)
