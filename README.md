@@ -17,7 +17,7 @@ VGG16 모델을 MNIST 데이터셋에 적용하여 **세 가지 Fine-Tuning 전�
 - Convolution + Classifier 모든 레이어 학습
 
 
-### 2. CASE 2: 마지막 레이어 교체만, 전체 학습
+### 2. CASE 2: 마지막 레이어 추가만 + 전체 학습
 - pretrained Convolution layer는 유지
 - 마지막 Linear 레이어만 MNIST 클래스 수에 맞게 변경
 
