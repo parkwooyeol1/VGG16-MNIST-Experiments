@@ -31,7 +31,7 @@
    - 학습 Loss는 점진적으로 감소하며, Validation Loss도 대부분 안정적  
    - Validation Accuracy 최고 99.38% 달성  
    - Early Stopping 5 Epoch에서 작동 → 모델이 이미 충분히 학습됨  
-   - 특징: 전체 학습했지만 Early Stopping 덕분에 빠르게 종료  
+   - 특징: 전체 학습했지만 Early Stopping 조기 종료  
 
 2. **CASE2**  
    - 학습 Loss 지속적으로 감소  
