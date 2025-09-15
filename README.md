@@ -26,7 +26,7 @@ VGG16 모델을 MNIST 데이터셋에 적용하여 **세 가지 Fine-Tuning 전�
 
 ---
 
-## 학습/검증 Loss 비교
+## 각 케이스 Loss/Accuracy 비교
 
 아래 그래프는 각 실험 케이스별 **Training/Validation Data에 대한 Loss와 Accuracy**를 보여줌:
 
