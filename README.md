@@ -28,11 +28,10 @@ VGG16 모델을 MNIST 데이터셋에 적용하여 **세 가지 Fine-Tuning 전�
 
 ## 학습/검증 Loss 비교
 
-아래 그래프는 각 실험 케이스별 **Training Loss와 Validation Loss**를 보여줌:
+아래 그래프는 각 실험 케이스별 **Training/Validation Data에 대한 Loss와 Accuracy**를 보여줌:
 
 ![Validation vs Loss](val_loss.png)
-
-- 그래프를 통해 **Early Stopping 시점**과 **Loss 안정화 여부**를 확인 가능  
+ 
 
 ---
 
